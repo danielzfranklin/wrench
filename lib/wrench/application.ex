@@ -14,7 +14,9 @@ defmodule Wrench.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Wrench.PubSub},
       # Start the Endpoint (http/https)
-      WrenchWeb.Endpoint
+      WrenchWeb.Endpoint,
+      {Finch, name: Wrench.Finch},
+      Wrench.Hex.Api.Requester
       # Start a worker by calling: Wrench.Worker.start_link(arg)
       # {Wrench.Worker, arg}
     ]

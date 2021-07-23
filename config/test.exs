@@ -20,3 +20,5 @@ config :wrench, WrenchWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :wrench, Wrench.Hex.Api.Requester, api_key: "pretend_hex_api_key"

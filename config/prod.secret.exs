@@ -30,6 +30,11 @@ config :wrench, WrenchWeb.Endpoint,
   ],
   secret_key_base: secret_key_base
 
+config :wrench, Wrench.Hex.Api.Requester,
+  api_key:
+    System.get_env("WRENCH_API_KEY") ||
+      raise("Missing env var WRENCH_API_KEY")
+
 # ## Using releases (Elixir v1.9+)
 #
 # If you are doing OTP releases, you need to instruct Phoenix
